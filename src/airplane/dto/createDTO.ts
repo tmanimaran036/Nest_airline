@@ -2,11 +2,11 @@ import { IsNotEmpty, IsNumber, IsString } from "class-validator";
 
 export class CreateAirDto{
     @IsString()
-    @IsNotEmpty()
+    @IsNotEmpty({message:'modelNumber is require'})
     modelNumber:string;
 
     @IsNumber()
-    @IsNotEmpty()
+    @IsNotEmpty({message:'capacity must be require'})
     capacity:number
 
 }

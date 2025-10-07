@@ -48,6 +48,5 @@ export class AirplaneService {
       console.log(value)
       return 'delete is success'
     }
-
 }
 

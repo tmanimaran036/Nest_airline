@@ -1,5 +1,5 @@
 import { Type } from "class-transformer";
-import { IsDate,IsNotEmpty,IsNumber, IsOptional, IsString } from "class-validator";
+import { IsDate,IsNotEmpty,IsNumber, IsOptional, IsString, Max, Min } from "class-validator";
 
 export class updateAirDto{
     @IsString()
@@ -7,6 +7,8 @@ export class updateAirDto{
     modelNumber:string;
 
     @IsNumber()
+    @Min(0)
+    @Max(600)
     @IsOptional()
     capacity:number;
 

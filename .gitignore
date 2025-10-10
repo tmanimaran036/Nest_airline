@@ -1,3 +1,5 @@
+node_modules
+package-lock.json
 # compiled output
 /dist
 /node_modules
@@ -56,7 +58,3 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-node_modules
-
-package-lock.json

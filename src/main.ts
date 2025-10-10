@@ -9,5 +9,6 @@ async function bootstrap() {
     new ValidationPipe({whitelist:true,forbidNonWhitelisted:true})
   )
   await app.listen(process.env.PORT ?? 4000);
+  console.log('server on port :4000')
 }
 bootstrap();

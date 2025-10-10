@@ -5,10 +5,10 @@ export class Airplane {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ unique: true })
+  @Column({ unique: true,nullable:false })
   modelNumber: string;
 
-  @Column()
+  @Column({nullable:false})
   capacity: number;
 
 //   @Column({type:'timestamp',default:()=> 'CURRENT_TIMESTAMP'})

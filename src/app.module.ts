@@ -6,6 +6,8 @@ import { AirplaneModule } from './airplane/airplane.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { Airplane } from './airplane/entities/airplanes';
+import { CityModule } from './city/city.module';
+import { City } from './city/entities/cityORM';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -14,9 +16,9 @@ import { Airplane } from './airplane/entities/airplanes';
     username:'root',
     password:'root',
     database:'airline_db',
-    entities:[Airplane],
+    entities:[Airplane,City],
     synchronize:true  
-  }) ,AirplaneModule],
+  }) ,AirplaneModule, CityModule],
   controllers: [AppController, AirplaneController],
   providers: [AppService],
 })
